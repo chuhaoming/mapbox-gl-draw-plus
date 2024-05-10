@@ -34,24 +34,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      # 安装 pnpm
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
+      # 安装 npm
+      - name: Install npm
+        uses: npm/action-setup@v4
         with:
           version: 8
 
       # 设置 node 版本
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          cache: 'npm'
 
       # 打包静态文件
       - name: Build
         env:
           APP_BASE_PATH: /${{ github.repository }}
-        run: pnpm install && pnpm run docs:build
+        run: cd docs && npm install && npm run docs:build
 
       # 部署
       - name: Deploy
