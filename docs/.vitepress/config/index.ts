@@ -5,7 +5,6 @@ import { zh } from './zh'
 
 export default defineConfig({
   ...shared,
-  outDir:'../public',
   base:'/mapbox-gl-draw-plus/',
   locales: {
     root: { label: 'English', ...en },
