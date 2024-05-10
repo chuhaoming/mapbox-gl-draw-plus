@@ -1,0 +1,15 @@
+{
+  "name": "@chmpr/demo",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@chmpr/map-draw": "workspace:^",
+    "@chmpr/map-draw-layer": "workspace:^",
+    "@chmpr/map-draw-modes": "workspace:^",
+    "@chmpr/operator": "workspace:^",
+    "@chmpr/map-tips": "workspace:^",
+    "mapbox-gl": "^3.2.0"
+  }
+}

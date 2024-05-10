@@ -1,0 +1,53 @@
+{
+  "name": "@chmpr/operator",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "map",
+    "mapbox",
+    "mapbox-gl-draw",
+    "mapbox-gl-draw-plus"
+  ],
+  "author": "Chuhaoming",
+  "license": "MIT",
+  "homepage": "https://github.com/chuhaoming/mapbox-gl-draw-plus/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuhaoming/mapbox-gl-draw-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chuhaoming/mapbox-gl-draw-plus/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/chmpr-operator.umd.js",
+  "module": "./dist/chmpr-operator.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/chmpr-operator.umd.js",
+      "import": "./dist/chmpr-operator.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@chmpr/draggable": "workspace:^",
+    "@chmpr/map-draw": "workspace:^",
+    "@chmpr/utils": "workspace:^",
+    "@turf/helpers": "^6.5.0",
+    "@turf/transform-rotate": "^6.5.0",
+    "@turf/transform-scale": "^6.5.0",
+    "deep-copy": "^1.4.2"
+  }
+}

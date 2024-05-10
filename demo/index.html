@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mapDraw</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="text/javascript">
+      // Adds in the FPS graph to the top of the page.
+      (function () {
+        var script = document.createElement('script');
+        script.onload = function () {
+          var stats = new Stats();
+          stats.domElement.style.cssText = 'position:fixed;right: 500px;top:100px;z-index:10000';
+          document.body.appendChild(stats.domElement);
+          //创建一个fps显示页面
+          requestAnimationFrame(function loop() {
+            stats.update();
+            requestAnimationFrame(loop);
+          });
+        };
+        script.src = '//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';
+        document.head.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>

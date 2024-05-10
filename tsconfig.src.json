@@ -1,0 +1,11 @@
+{
+  // 继承基础配置
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    // 组件库依赖浏览器的 DOM API
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["node"] //这会告诉 TypeScript compiler 从 node_modules/node 路径下查找 node 的类型声明文件。
+  },
+  "include": ["typings/env.d.ts", "packages/**/src"]
+}

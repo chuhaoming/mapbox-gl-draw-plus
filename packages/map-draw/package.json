@@ -1,0 +1,47 @@
+{
+  "name": "@chmpr/map-draw",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "mapbox-gl",
+    "mapbox-gl-draw"
+  ],
+  "author": "Chuhaoming",
+  "license": "MIT",
+  "homepage": "https://github.com/chuhaoming/mapbox-gl-draw-plus/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuhaoming/mapbox-gl-draw-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chuhaoming/mapbox-gl-draw-plus/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/chmpr-map-draw.umd.js",
+  "module": "./dist/chmpr-map-draw.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/chmpr-map-draw.umd.js",
+      "import": "./dist/chmpr-map-draw.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@chmpr/map-tips": "workspace:^",
+    "@chmpr/operator": "workspace:^",
+    "@chmpr/utils": "workspace:^"
+  }
+}

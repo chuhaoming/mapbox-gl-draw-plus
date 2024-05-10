@@ -1,0 +1,18 @@
+{
+  "name": "docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vitepress build",
+    "dev": "vitepress dev",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "@chmpr/map-draw-layer": "workspace:^",
+    "@chmpr/map-draw-modes": "workspace:^",
+    "@chmpr/map-draw": "workspace:^",
+    "@chmpr/map-tips": "workspace:^",
+    "@chmpr/operator": "workspace:^"
+  }
+}

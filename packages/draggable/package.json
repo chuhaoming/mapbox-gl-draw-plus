@@ -1,0 +1,45 @@
+{
+  "name": "@chmpr/draggable",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "map",
+    "mapbox",
+    "mapbox-gl-draw",
+    "mapbox-gl-draw-plus"
+  ],
+  "author": "Chuhaoming",
+  "license": "MIT",
+  "homepage": "https://github.com/chuhaoming/mapbox-gl-draw-plus/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuhaoming/mapbox-gl-draw-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chuhaoming/mapbox-gl-draw-plus/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/chmpr-draggable.umd.js",
+  "module": "./dist/chmpr-draggable.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/chmpr-draggable.umd.js",
+      "import": "./dist/chmpr-draggable.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {}
+}
