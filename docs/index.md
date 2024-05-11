@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Mapbox-gl-draw-plus
-  text: Mapbox-GL-based GeoJSON Editor plugins.
+  text: Mapbox-gl based GeoJSON Editor plugins.
   tagline: add commonly used feature plugins
   actions:
     - theme: alt
