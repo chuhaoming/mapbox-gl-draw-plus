@@ -4,6 +4,7 @@ import { Tips } from '@chmpr/map-tips';
 import {
   Map,
 } from 'mapbox-gl';
+import { Units } from '@turf/helpers';
 
 export type ModeStateType = 'hot' | 'cold' | 'dragVertex';
 export type FeatureType = {
@@ -19,6 +20,8 @@ export type EventOptions = {
   keybindings?: boolean;
   mapLayer?:MapDrawLayer
   operator?: Operator,
+  units?:Units;
+  isMeasure?: boolean;
   tips?: Tips
 };
 export type DrawGeometryType = {

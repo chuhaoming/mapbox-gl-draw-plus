@@ -63,7 +63,6 @@
     "vue-tsc": "^1.8.5"
   },
   "dependencies": {
-    "@turf/bezier-spline": "^6.5.0",
     "@turf/helpers": "^6.5.0",
     "bcryptjs": "^2.4.3",
     "mapbox-gl": "^3.2.0",

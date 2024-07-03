@@ -46,7 +46,9 @@ onMounted(async () => {
     });
   });
   const tips = new Tips();
-  mapDraw = new MapboxDraw({ map, operator: new Operator(), tips });
+  mapDraw = new MapboxDraw({
+    map, operator: new Operator(), isMeasure: true, tips,
+  });
 });
 const line = new DrawLineString();
 const drawLine = () => {

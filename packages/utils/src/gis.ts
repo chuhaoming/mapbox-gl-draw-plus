@@ -101,3 +101,81 @@ export function destination(
 
   return [lng, lat];
 }
+const earthRadius = 6371008.8;
+
+// index.ts
+export const textFactors:any = {
+  acres: 'acre',
+  centimeters: 'cm',
+  centimetres: 'cm',
+  feet: 'feet',
+  hectares: 'hectare',
+  inches: 'in',
+  kilometers: 'km',
+  kilometres: 'km',
+  meters: 'm',
+  metres: 'm',
+  miles: 'mi',
+  millimeters: 'mm',
+  millimetres: 'mm',
+  yards: 'yards',
+};
+export const areaFactors:any = {
+  acres: 247105e-9,
+  centimeters: 1e4,
+  centimetres: 1e4,
+  feet: 10.763910417,
+  hectares: 1e-4,
+  inches: 1550.003100006,
+  kilometers: 1e-6,
+  kilometres: 1e-6,
+  meters: 1,
+  metres: 1,
+  miles: 386e-9,
+  nauticalmiles: 29155334959812285e-23,
+  millimeters: 1e6,
+  millimetres: 1e6,
+  yards: 1.195990046,
+};
+/**
+ * @private
+ * A constant used for converting degrees to radians.
+ * Represents the ratio of PI to 180.
+ *
+ * @type {number}
+ */
+const PI_OVER_180 = Math.PI / 180;
+
+/**
+ * @private
+ * A constant factor used to compute the area of a polygon.
+ * It's derived from the square of the Earth's radius divided by 2.
+ *
+ * @type {number}
+ */
+const FACTOR = (earthRadius * earthRadius) / 2;
+
+export function ringArea(coords: number[][]): number {
+  const coordsLength = coords.length;
+
+  if (coordsLength <= 2) return 0;
+  let total = 0;
+
+  let i = 0;
+  while (i < coordsLength) {
+    const lower = coords[i];
+    const middle = coords[i + 1 === coordsLength ? 0 : i + 1];
+    const upper =
+      coords[i + 2 >= coordsLength ? (i + 2) % coordsLength : i + 2];
+
+    const lowerX = lower[0] * PI_OVER_180;
+    const middleY = middle[1] * PI_OVER_180;
+    const upperX = upper[0] * PI_OVER_180;
+
+    total += (upperX - lowerX) * Math.sin(middleY);
+
+    i++;
+  }
+
+  return Math.abs(total * FACTOR);
+}

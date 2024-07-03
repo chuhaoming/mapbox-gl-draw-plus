@@ -10,9 +10,9 @@ import { DrawLineString } from './drawLineString';
 export class DrawPolygon extends ModeObject {
   name: 'Polygon' = 'Polygon';
 
-  coordinates!:Coords<GeoJSON.Position[][]>;
+  coordinates!: Coords<GeoJSON.Position[][]>;
 
-  drawLine:DrawLineString;
+  drawLine: DrawLineString;
 
   curDraw!: DrawGeometryType;
 
@@ -38,7 +38,7 @@ export class DrawPolygon extends ModeObject {
     if (this.tips) this.tips.changeTip('step1');
   }
 
-  getGeometry(options:DrawGeometryType): DrawGeometryType {
+  getGeometry(options: DrawGeometryType): DrawGeometryType {
     const {
       meta, id, parent, coordinates,
       active,
@@ -80,7 +80,7 @@ export class DrawPolygon extends ModeObject {
     this.curVertexPointGeo.coordinates = [lng, lat];
   }
 
-  getCoordinates():Coords<GeoJSON.Position[][]> {
+  getCoordinates(): Coords<GeoJSON.Position[][]> {
     return this.coordinates.map((coords) => coords.concat([coords[0]]));
   }
 }

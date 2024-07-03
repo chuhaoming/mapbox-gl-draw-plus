@@ -48,7 +48,7 @@ onMounted(async () => {
     });
   });
   mapDraw = new MapboxDraw({
-    map, operator: new Operator(), mapLayer: new MapDrawLayer(), tips: new Tips(),
+    map, operator: new Operator(), mapLayer: new MapDrawLayer(), isMeasure: true, tips: new Tips(),
   });
 });
 const line = new DrawLineString();

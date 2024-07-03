@@ -189,5 +189,25 @@ export const theme = [
       'circle-color': ['coalesce', ['get', 'circle-color'], hotColor],
     },
   },
+  {
+    id: 'map-data-measure',
+    type: 'symbol',
+    filter: ['all',
+      ['!=', ['get', 'total'], 0],
+    ],
+    layout: {
+      'text-field': '{total}{unit}',
+      'text-anchor': 'center',
+      'text-max-width': 60,
+      'text-offset': [0, -2],
+      'text-font': [
+        'Open Sans Regular ',
+      ],
+      'text-size': 15,
+    },
+    paint: {
+      'text-color': '#0977ff',
+    },
+  },
 
 ];

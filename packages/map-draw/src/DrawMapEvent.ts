@@ -47,6 +47,8 @@ export class DrawMapEvent {
     this.options = options;
     this.map = options.map;
     this.tips = options.tips;
+    MapFeature.UNITS = options.units || 'meters';
+    MapFeature.isMeasure = options.isMeasure || false;
     this.container = this.map.getContainer();
     this.operator = options.operator;
     this.mapLayer = options.mapLayer;
