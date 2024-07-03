@@ -15,6 +15,7 @@
     "prepare": "husky install",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx,.vue --fix ./",
     "clean:type": "rimraf ./dist",
+    "dev": "pnpm --filter \"./demo\" run dev",
     "type:node": "tsc -p tsconfig.node.json --noEmit --composite false",
     "type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
     "build:p": "pnpm run type:src && pnpm --filter \"./packages/**\" run build",
