@@ -13,7 +13,7 @@ outline: deep
 ::: code-group
 
 ```sh [npm]
- npm add @chmpr/map-tips
+ npm i @chmpr/map-tips
 ```
 
 ```sh [pnpm]

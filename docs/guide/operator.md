@@ -13,7 +13,7 @@ outline: deep
 ::: code-group
 
 ```sh [npm]
- npm add @chmpr/operator
+ npm i @chmpr/operator
 ```
 
 ```sh [pnpm]

@@ -13,7 +13,7 @@ outline: deep
 ::: code-group
 
 ```sh [npm]
- npm add @chmpr/map-draw
+ npm i @chmpr/map-draw
 ```
 
 ```sh [pnpm]
@@ -45,7 +45,8 @@ const map = new mapboxgl.Map({
   zoom: 3,
 });
 //Create a Mapdraw instance
-const mapDraw = new MapboxDraw({ map });
+//isMeasure: true => add measure   default:false
+const mapDraw = new MapboxDraw({ map, isMeasure: true });
 ```
 
 #### 2. plotted points

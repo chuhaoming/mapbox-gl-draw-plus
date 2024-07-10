@@ -2,18 +2,18 @@
 outline: deep
 ---
 
-## 快速安装
+## Quick install
 
-### @chmpr/draggable 包的安装
+### @chmpr/draggable package install
 
 > dom的简单拖拽插件
 
-@chmpr/draggable 下载安装：
+@chmpr/draggable download and install:
 
 ::: code-group
 
 ```sh [npm]
- npm add @chmpr/draggable
+ npm i @chmpr/draggable
 ```
 
 ```sh [pnpm]

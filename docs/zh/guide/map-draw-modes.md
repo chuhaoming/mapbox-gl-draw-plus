@@ -13,7 +13,7 @@ outline: deep
 ::: code-group
 
 ```sh [npm]
- npm add @chmpr/map-draw-modes
+ npm i @chmpr/map-draw-modes
 ```
 
 ```sh [pnpm]

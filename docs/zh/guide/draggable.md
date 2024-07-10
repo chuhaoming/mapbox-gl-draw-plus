@@ -13,7 +13,7 @@ outline: deep
 ::: code-group
 
 ```sh [npm]
- npm add @chmpr/draggable
+ npm i @chmpr/draggable
 ```
 
 ```sh [pnpm]
