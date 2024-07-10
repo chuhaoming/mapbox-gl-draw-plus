@@ -45,6 +45,7 @@ const map = new mapboxgl.Map({
   zoom: 3,
 });
 //创建一个 Mapdraw实例
+//isMeasure: true => 添加测绘功能  多边形：面积   线：长度  默认单位是 平方米  米  默认不添加将关闭测绘功能
 const mapDraw = new MapboxDraw({ map });
 ```
 
